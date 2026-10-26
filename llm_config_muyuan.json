@@ -1,0 +1,7 @@
+{
+  "base_url": "https://muyuan.do/v1",
+  "api_key": "sk-cRq80ZxFfJ1Wq9QnFWuXlI0cC41rrZ4HYZ81jQy8GSv8AG4z",
+  "model": "glm-5.3-flash",
+  "timeout_seconds": 60,
+  "max_tokens": 4096
+}
