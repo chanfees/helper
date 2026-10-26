@@ -1,0 +1,7 @@
+{
+  "name": "private_chat",
+  "api": "v1",
+  "description": "好友单聊中直接回复，不加人格或风格限制",
+  "entry": "__init__.py",
+  "requires": ["friend.text.receive", "friend.text.send"]
+}

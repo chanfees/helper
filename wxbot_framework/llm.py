@@ -49,7 +49,9 @@ class LLMClient:
         request = Request(self.base_url + "/chat/completions",
                           data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
                           headers={"Authorization": "Bearer " + self._api_key,
-                                   "Content-Type": "application/json"}, method="POST")
+                                   "Content-Type": "application/json",
+                                   # 部分中转会拦截 urllib 的默认 User-Agent 并返回 403。
+                                   "User-Agent": "WxBot/1.0"}, method="POST")
         try:
             with urlopen(request, timeout=self.timeout) as response:
                 raw = response.read(1024 * 1024 + 1)
